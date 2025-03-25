@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: n8n
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:thanad/n8n.git
+    path: helm/n8n
+    helm:
+      releaseName: n8n
+      valueFiles:
+        - values.yaml
+
+  destination:
+    name: in-cluster
+    namespace: default
