@@ -81,7 +81,7 @@ env:
   - name: GENERIC_TIMEZONE
     value: "Asia/Bangkok"
   - name: N8N_SECURE_COOKIE
-    value: false
+    value: "false"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
