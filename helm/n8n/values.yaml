@@ -60,8 +60,7 @@ service:
 ingress:
   enabled: true
   className: ""
-  annotations: 
-    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+  annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
@@ -81,8 +80,8 @@ env:
     value: "https"
   - name: GENERIC_TIMEZONE
     value: "Asia/Bangkok"
-  - name: N8N_SECURE_COOKIE
-    value: "false"
+  - name: N8N_USER_MANAGEMENT_DISABLED
+    value: "true"
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

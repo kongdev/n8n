@@ -41,3 +41,6 @@ spec:
     automated: {}
 ```
 
+```
+minikube tunnel
+```
