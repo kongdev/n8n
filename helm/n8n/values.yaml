@@ -1,3 +1,10 @@
+global:
+  postgresql:
+    auth:
+      username: n8n
+      password: n8n
+      database: n8n
+
 # Default values for n8n.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
