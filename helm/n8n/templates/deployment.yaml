@@ -80,12 +80,14 @@ spec:
           {{- end }}
           volumeMounts:
             - mountPath: /home/node/.n8n
-              name: {{ include "n8n.fullname" . }}-data
+              name: data
           {{- with .Values.volumeMounts }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
       volumes:
-        - name: {{ include "n8n.fullname" . }}-data
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ include "n8n.fullname" . }}-data
           emptyDir: {}
       {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
