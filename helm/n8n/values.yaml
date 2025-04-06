@@ -115,13 +115,13 @@ autoscaling:
 
 # Additional volumes on the output Deployment definition.
 volumes:
-  - name: n8n_data
+  - name: "data"
     persistentVolumeClaim:
     claimName: n8n
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
-  - name: n8n_data
+  - name: "data"
     mountPath: "/home/node/.n8n"
     readOnly: false
 
