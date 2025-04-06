@@ -80,15 +80,7 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-env: 
-  - name: N8N_PORT
-    value: "5678"
-  - name: N8N_PROTOCOL
-    value: "https"
-  - name: GENERIC_TIMEZONE
-    value: "Asia/Bangkok"
-  - name: N8N_USER_MANAGEMENT_DISABLED
-    value: "true"
+env: []
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
