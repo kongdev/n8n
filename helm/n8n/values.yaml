@@ -114,17 +114,16 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes: []
-# - name: foo
-#   secret:
-#     secretName: mysecret
-#     optional: false
+volumes:
+  - name: n8n_data
+    persistentVolumeClaim:
+    claimName: n8n
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-# - name: foo
-#   mountPath: "/etc/foo"
-#   readOnly: true
+volumeMounts:
+  - name: n8n_data
+    mountPath: "/home/node/.n8n"
+    readOnly: false
 
 nodeSelector: {}
 
