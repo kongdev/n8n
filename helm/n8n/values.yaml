@@ -123,7 +123,6 @@ volumes:
 volumeMounts:
   - name: "data"
     mountPath: "/home/node/.n8n"
-    readOnly: false
 
 nodeSelector: {}
 
