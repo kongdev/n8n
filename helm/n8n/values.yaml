@@ -121,15 +121,10 @@ autoscaling:
   # targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
-volumes:
-  - name: "data"
-    persistentVolumeClaim:
-    claimName: n8n
+volumes: []
 
 # Additional volumeMounts on the output Deployment definition.
-volumeMounts:
-  - name: "data"
-    mountPath: "/home/node/.n8n"
+volumeMounts: []
 
 nodeSelector: {}
 
