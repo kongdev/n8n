@@ -11,7 +11,10 @@ spec:
       releaseName: n8n
       valueFiles:
         - values.yaml
-
+  ignoreDifferences:
+  - kind: Secret
+    jsonPointers:
+      - /data/postgres-password
   destination:
     name: in-cluster
     namespace: default
