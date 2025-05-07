@@ -28,7 +28,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:thanad/n8n.git
+    repoURL: https://github.com/kongdev/n8n.git
     path: manifest
     targetRevision: HEAD
     directory:
