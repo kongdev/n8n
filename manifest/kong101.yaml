@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kong101
+  name: test-123
 spec:
   destination:
     namespace: default
