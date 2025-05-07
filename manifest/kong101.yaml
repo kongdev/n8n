@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kong101
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: helm/kong-101
+    repoURL: git@github.com:kongdev/n8n.git
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated: {}
